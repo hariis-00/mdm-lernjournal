@@ -11,10 +11,10 @@ Es ist ein einfacher Taschenrechner, welcher die Addition und Subtraktion von 2 
 | Verwendete Library aus PyPi (Name) |
 blinker, click, flask, jinja2, markupsafe, werkzeug|
 | Verwendete Library aus PyPi (URL) | https://pypi.org/project/blinker/1.9.0/
-https://pypi.org/project/click/8.1.8/
-https://pypi.org/project/Jinja2/3.1.5/
-https://pypi.org/project/MarkupSafe/3.0.2/
-https://pypi.org/project/Werkzeug/3.1.3/  |
+                                      https://pypi.org/project/click/8.1.8/
+                                      https://pypi.org/project/Jinja2/3.1.5/
+                                      https://pypi.org/project/MarkupSafe/3.0.2/
+                                      https://pypi.org/project/Werkzeug/3.1.3/  |
 
 ## App, Funktionalität
 
