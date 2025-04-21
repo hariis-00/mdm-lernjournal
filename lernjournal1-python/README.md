@@ -11,7 +11,7 @@
 
 ## App, Funktionalität
 
-Ziel war es, eine einfache Web-Applikation zu entwickeln, bei der zwei Zahlen eingegeben und anschließend addiert oder subtrahiert werden können. Die Umsetzung erfolgte mit **Flask (Backend)**, **Vanilla JS (Frontend-Logik)** sowie **Bootstrap (Styling)**.
+Ziel war es, eine einfache Web-Applikation zu entwickeln, bei der zwei Zahlen eingegeben und anschließend addiert oder subtrahiert werden können. Die Umsetzung erfolgte mit **Flask (Backend)**, sowie **Bootstrap (Styling)**.
 
 Die Benutzeroberfläche (`index.html`) enthält:
 - Zwei Eingabefelder
@@ -27,7 +27,14 @@ Das Backend (`app.py`) verarbeitet diesen Request:
 
 ## Dependency Management
 
-Für das Dependency Management wird eine `requirements.txt` Datei verwendet, die alle notwendigen Bibliotheken und deren Versionen auflistet. Diese Datei ermöglicht es, die benötigten Abhängigkeiten einfach zu installieren, indem der Befehl `pip install -r requirements.txt` ausgeführt wird. Dadurch wird sichergestellt, dass alle Entwickler und Benutzer der Applikation die gleichen Versionen der Bibliotheken verwenden, was die Kompatibilität und Stabilität der Anwendung gewährleistet.
+Für die Verwaltung der Python-Abhängigkeiten habe ich auf ein sauberes, reproduzierbares Setup gesetzt. Dabei kamm pip-tools zum Einsatz, welches es ermöglicht, aus einer deklarativen Datei (requirements.in) eine vollständig aufgelöste Datei (requirements.txt) mit allen direkten und transitiven Abhängigkeiten zu generieren.
+
+Vorteile dieses Ansatzes:
+- Reproduzierbarkeit: Das Projekt kann auf jedem Rechner mit den exakt gleichen Versionen installiert werden
+- Transparenz: Welche Librarys von anderen Librarys abhängen, ist durch die .txt-Dateien gut nachvollziehbar
+
+Setup-Befehl:
+pip install -r requirements.txt
 
 ## Deployment
 
