@@ -38,5 +38,19 @@ pip install -r requirements.txt
 
 ## Deployment
 
-Das Deployment wurde auf zu einem auf Github gemacht und des anderen auf Azure. Somit kann das veröffentlichte Modell abgerufen.
+Für das Deployment der Webapplikation wurde Microsoft Azure verwendet. Ziel war es, das lokal entwickelte Flask-Projekt als ZIP-Datei auf einen Azure App Service zu deployen, sodass es öffentlich erreichbar ist – ohne Containerisierung oder Docker.
+
+Vorgehen Schritt für Schritt:
+
+1. Projekt vorbereiten (ZIP-Archiv erstellen)
+Zuerst wurde das Projekt als ZIP-Datei verpackt, wobei temporäre Dateien (z.B. .venv) ausgeschlossen wurden:
+zip -r deployment.zip . -x "*.venv*" "*.git*" "__pycache__/*"
+
+2. Azure Ressource anlegen:
+Es wurde eine neue Ressourcengruppe, ein App Service Plan und eine Web-App mit Python Runtime erstellt. Dabei wurde die Version Python 3.13 gewählt und ein frei wählbarer App-Name vergeben:
+az group create --name mdm-lj1-rg --location switzerlandnorth (![Ressourcengruppe](images/lj1_jusmahar_azure_ressourcengruppe.png))
+az appservice plan create --name mdm-lj1-plan --resource-group mdm-lj1-rg --sku F1 --is-linux ![App Service](images/lj1_jusmahar_azure_appservice.png)
+az webapp create --resource-group mdm-lj1-rg --plan mdm-lj1-plan --name jusmahartaschenrechner --runtime "PYTHON:3.13" ![Web App](images/lj1_jusmahar_azure_webapp.png)
+
+
 
