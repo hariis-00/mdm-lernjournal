@@ -48,8 +48,13 @@ zip -r deployment.zip . -x "*.venv*" "*.git*" "__pycache__/*"
 
 2. Azure Ressource anlegen:
 Es wurde eine neue Ressourcengruppe, ein App Service Plan und eine Web-App mit Python Runtime erstellt. Dabei wurde die Version Python 3.13 gewählt und ein frei wählbarer App-Name vergeben:
-az group create --name mdm-lj1-rg --location switzerlandnorth <img src="images/lj1_jusmahar_azure_ressourcengruppe.png" alt="Ressourcengruppe" width="500">
-az appservice plan create --name mdm-lj1-plan --resource-group mdm-lj1-rg --sku F1 --is-linux <img src="images/lj1_jusmahar_azure_appservice.png" alt="App Service" width="500">
-az webapp create --resource-group mdm-lj1-rg --plan mdm-lj1-plan --name jusmahartaschenrechner --runtime "PYTHON:3.13" <img src="images/lj1_jusmahar_azure_webapp.png" alt="Web App" width="500">
+az group create --name mdm-lj1-rg --location switzerlandnorth
+<img src="images/lj1_jusmahar_azure_ressourcengruppe.png" alt="Ressourcengruppe" width="500" height="200">
+
+az appservice plan create --name mdm-lj1-plan --resource-group mdm-lj1-rg --sku F1 --is-linux 
+<img src="images/lj1_jusmahar_azure_appservice.png" alt="App Service" width="500" height="200">
+
+az webapp create --resource-group mdm-lj1-rg --plan mdm-lj1-plan --name jusmahartaschenrechner --runtime "PYTHON:3.13" 
+<img src="images/lj1_jusmahar_azure_webapp.png" alt="Web App" width="500" height="200">
 
 
