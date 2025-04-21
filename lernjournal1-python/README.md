@@ -50,13 +50,13 @@ Zuerst wurde das Projekt als ZIP-Datei verpackt, wobei temporäre Dateien (z.B. 
 Es wurde eine neue Ressourcengruppe, ein App Service Plan und eine Web-App mit Python Runtime erstellt. Dabei wurde die Version Python 3.13 gewählt und ein frei wählbarer App-Name vergeben:
 
 `az group create --name mdm-lj1-rg --location switzerlandnorth`
-<img src="images/lj1_jusmahar_azure_ressourcengruppe.png" alt="Ressourcengruppe" width="500" height="100">
+<img src="images/lj1_jusmahar_azure_ressourcengruppe.png" alt="Ressourcengruppe" style="max-width: 100%; height: auto;">
 
 `az appservice plan create --name mdm-lj1-plan --resource-group mdm-lj1-rg --sku F1 --is-linux`
-<img src="images/lj1_jusmahar_azure_appservice.png" alt="App Service" width="500" height="200">
+<img src="images/lj1_jusmahar_azure_appservice.png" alt="App Service" style="max-width: 100%; height: auto;">
 
 `az webapp create --resource-group mdm-lj1-rg --plan mdm-lj1-plan --name jusmahartaschenrechner --runtime "PYTHON:3.13"`
-<img src="images/lj1_jusmahar_azure_webapp.png" alt="Web App" width="500" height="200">
+<img src="images/lj1_jusmahar_azure_webapp.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 3. Startkonfiguration für Azure
 Azure erwartet beim Python-Deployment einen sogenannten Entry-Point. Damit gunicorn die Flask-App starten kann, wurde eine startup.txt mit folgendem Inhalt im Projektverzeichnis erstellt:
@@ -66,13 +66,13 @@ Azure erwartet beim Python-Deployment einen sogenannten Entry-Point. Damit gunic
 Die ZIP-Datei wurde via Azure CLI hochgeladen:
 
 `az webapp deployment source config-zip --resource-group mdm-lj1-rg --name jusmahartaschenrechner --src deployment.zip`
-<img src="images/lj1_jusmahar_azure_deployment.png" alt="Web App" width="500" height="200">
+<img src="images/lj1_jusmahar_azure_deployment.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 5. Webapp aufrufen:
 Nach dem erfolgreichen Upload war die Anwendung sofort unter folgender URL ersichtlich:
 https://jusmahartaschenrechner.azurewebsites.net
 
-<img src="images/lj1_jusmahar_azure_applikation.png" alt="Web App" width="500" height="350">
+<img src="images/lj1_jusmahar_azure_applikation.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 Fazit:
 Durch das Deployment mit Azure konnte ich die Webapplikation vollständig in Betrieb nehmen und öffentlich zugänglich machen. Die gewonnenen Erkenntnisse helfen mir zukünftig beim Verständnis von App Services. 
