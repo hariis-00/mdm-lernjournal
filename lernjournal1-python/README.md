@@ -69,7 +69,10 @@ Die ZIP-Datei wurde via Azure CLI hochgeladen:
 <img src="images/lj1_jusmahar_azure_deployment.png" alt="Web App" width="500" height="200">
 
 5. Webapp aufrufen:
-Nach dem erfolgreichen Upload war die Anwendung sofort unter folgender URL ersichtlich: https://jusmahartaschenrechner.azurewebsites.net
+Nach dem erfolgreichen Upload war die Anwendung sofort unter folgender URL ersichtlich:
+https://jusmahartaschenrechner.azurewebsites.net
+
+<img src="images/lj1_jusmahar_azure_applikation.png" alt="Web App" width="500" height="200">
 
 Fazit:
 Durch das Deployment mit Azure konnte ich die Webapplikation vollständig in Betrieb nehmen und öffentlich zugänglich machen. Die gewonnenen Erkenntnisse helfen mir zukünftig beim Verständnis von App Services. 
