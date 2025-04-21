@@ -77,7 +77,7 @@ Schritte:
 <img src="images/lj2_jusmahar_docker_webapponnx.png" alt="Web App" style="max-width: 100%; height: auto;">
 7. Nach einem erfolgreichen Testlauf habe ich das lokale Image auf Docker Hub veröffentlicht:
 <img src="images/lj2_jusmahar_docker_dockerhub.png" alt="Web App" style="max-width: 100%; height: auto;">
-<img src="images/lj2_jusmahar_docker_dockerhub1.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/lj2_jusmahar_docker_dcokerhub1.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 ### Dokumentation Deployment Azure Web App
 
