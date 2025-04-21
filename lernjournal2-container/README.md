@@ -18,11 +18,11 @@ Inital habe ich versucht die Anwendung (Metabase + PostgreSQL) manuell einzurich
 
 Schritte:
 1. Zuerst wurde ein separates Netzwerk erstellt, damit sich die Container gegenseitig per Namen erreichen können.
-<img src="images/lj2_jusmahar_docker_createnetwork.png" alt="Web App" width="500" height="200">
+<img src="images/lj2_jusmahar_docker_createnetwork.png" alt="Web App" width="1000" height="200">
 2. Der PostgreSQL-Container wurde im Hintergrund gestartet und direkt mit dem Netzwerk `metabase-net` verbunden. Die Datebank wird beim Start automatisch konfiguriert.
-<img src="images/lj2_jusmahar_docker_connectnetwork.png" alt="Web App" width="500" height="200">
+<img src="images/lj2_jusmahar_docker_connectnetwork.png" alt="Web App" width="1000" height="200">
 3. Im zweiten Schritt wurde der Metabase-Container gestartet - ebenfalls im gleichen Netzwerk. Über die Umgebungsvariablen wird die PostgreSQL-Datenbank als Backend angegeben.
-<img src="images/lj2_jusmahar_docker_connectlocalhost.png" alt="Web App" width="500" height="200">
+<img src="images/lj2_jusmahar_docker_connectlocalhost.png" alt="Web App" width="1000" height="200">
 4. Nun sind im Docker die beiden Images ersichtlich und der Connection-String zum Localhost:3000 wird angegeben.
 <img src="images/lj2_jusmahar_docker_ansichtdocker1.png" alt="Web App" width="500" height="200">
 
