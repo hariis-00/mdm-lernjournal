@@ -17,10 +17,14 @@
 Inital habe ich versucht die Anwendung (Metabase + PostgreSQL) manuell einzurichten via Netzwerke. Dabei wurden die beiden Container gezielt über ein gemeinsames Docker-Netzwerk verbunden. Ziel war es, das Zusammenspiel von Images, Container und Docker-Netzwerken besser zu verstehen und kontrolliert zu testen.
 
 Schritte:
-1. Zuerst wurde ein separates Netzwerk erstellt, damit sich die Container gegenseitig per Namen erreichen können: `docker network create metabase-net`
-2. Der PostgreSQL-Container wurde im Hintergrund gestartet und direkt mit dem Netzwerk `metabase-net` verbunden. Die Datebank wird beim Start automatisch konfiguriert
-
-
+1. Zuerst wurde ein separates Netzwerk erstellt, damit sich die Container gegenseitig per Namen erreichen können.
+<img src="images/lj2_jusmahar_docker_createnetwork.png" alt="Web App" width="500" height="200">
+2. Der PostgreSQL-Container wurde im Hintergrund gestartet und direkt mit dem Netzwerk `metabase-net` verbunden. Die Datebank wird beim Start automatisch konfiguriert.
+<img src="images/lj2_jusmahar_docker_connectnetwork.png" alt="Web App" width="500" height="200">
+3. Im zweiten Schritt wurde der Metabase-Container gestartet - ebenfalls im gleichen Netzwerk. Über die Umgebungsvariablen wird die PostgreSQL-Datenbank als Backend angegeben.
+<img src="images/lj2_jusmahar_docker_connectlocalhost.png" alt="Web App" width="500" height="200">
+4. Nun sind im Docker die beiden Images ersichtlich und der Connection-String zum Localhost:3000 wird angegeben.
+<img src="images/lj2_jusmahar_docker_ansichtdocker1.png" alt="Web App" width="500" height="200">
 
 
 ### Dokumentation Docker-Compose Deployment
@@ -42,6 +46,7 @@ Erkenntnisse aus der Vorgehensweise:
 2. Die Anwendung lässt sich in 2-3 Minuten aufsetzen, sieht aber wie eine professionelle BI-Anwendung aus, die auch für echte Use-Cases verwendet werden kann.
 
 Ansicht Docker:
+
 <img src="images/lj2_jusmahar_docker_ansichtdocker.png" alt="Web App" width="500" height="200">
 
 ## Deployment ML-App
