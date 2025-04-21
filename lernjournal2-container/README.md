@@ -76,7 +76,8 @@ Schritte:
 6. Die Anwendung war im Anschluss direkt über den Browser unter localhost:9000 erreichbar. Die Benutzeroberfläche wurde korrekt geladen und ich konnte mittels einem Bild eines Elefanten auch das Testing der Webapplikation durchführen.
 <img src="images/lj2_jusmahar_docker_webapponnx.png" alt="Web App" style="max-width: 100%; height: auto;">
 7. Nach einem erfolgreichen Testlauf habe ich das lokale Image auf Docker Hub veröffentlicht:
-<img src="images/lj2_jusmahar_docker_webapponnx.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/lj2_jusmahar_docker_dockerhub.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/lj2_jusmahar_docker_dockerhub1.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 ### Dokumentation Deployment Azure Web App
 
