@@ -44,26 +44,28 @@ Vorgehen Schritt für Schritt:
 
 1. Projekt vorbereiten (ZIP-Archiv erstellen)
 Zuerst wurde das Projekt als ZIP-Datei verpackt, wobei temporäre Dateien (z.B. .venv) ausgeschlossen wurden:
-zip -r deployment.zip . -x "*.venv*" "*.git*" "__pycache__/*"
+`zip -r deployment.zip . -x "*.venv*" "*.git*" "__pycache__/*"`
 
 2. Azure Ressource anlegen:
 Es wurde eine neue Ressourcengruppe, ein App Service Plan und eine Web-App mit Python Runtime erstellt. Dabei wurde die Version Python 3.13 gewählt und ein frei wählbarer App-Name vergeben:
-az group create --name mdm-lj1-rg --location switzerlandnorth
+
+`az group create --name mdm-lj1-rg --location switzerlandnorth`
 <img src="images/lj1_jusmahar_azure_ressourcengruppe.png" alt="Ressourcengruppe" width="500" height="100">
 
-az appservice plan create --name mdm-lj1-plan --resource-group mdm-lj1-rg --sku F1 --is-linux 
+`az appservice plan create --name mdm-lj1-plan --resource-group mdm-lj1-rg --sku F1 --is-linux`
 <img src="images/lj1_jusmahar_azure_appservice.png" alt="App Service" width="500" height="200">
 
-az webapp create --resource-group mdm-lj1-rg --plan mdm-lj1-plan --name jusmahartaschenrechner --runtime "PYTHON:3.13" 
+`az webapp create --resource-group mdm-lj1-rg --plan mdm-lj1-plan --name jusmahartaschenrechner --runtime "PYTHON:3.13"`
 <img src="images/lj1_jusmahar_azure_webapp.png" alt="Web App" width="500" height="200">
 
 3. Startkonfiguration für Azure
 Azure erwartet beim Python-Deployment einen sogenannten Entry-Point. Damit gunicorn die Flask-App starten kann, wurde eine startup.txt mit folgendem Inhalt im Projektverzeichnis erstellt:
-gunicorn --bind=0.0.0.0 --timeout 600 app:app
+`gunicorn --bind=0.0.0.0 --timeout 600 app:app`
 
 4. Deployment durchführen
 Die ZIP-Datei wurde via Azure CLI hochgeladen:
-az webapp deployment source config-zip --resource-group mdm-lj1-rg --name jusmahartaschenrechner --src deployment.zip
+
+`az webapp deployment source config-zip --resource-group mdm-lj1-rg --name jusmahartaschenrechner --src deployment.zip`
 <img src="images/lj1_jusmahar_azure_deployment.png" alt="Web App" width="500" height="200">
 
 5. Webapp aufrufen:
