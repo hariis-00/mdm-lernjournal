@@ -11,7 +11,19 @@
 
 ## App, Funktionalität
 
-Die Applikation kann einfache Additionen und Subtraktionen durchführen. Damit die Anwendung auch bei anderen Personen funktioniert, müssen die Librarys aus Requirements.txt heruntergeladen werden. Vorteilhaft wäre es die aktuellen Librarys rauszulöschen und die neuen neu zu installieren. 
+Ziel war es, eine einfache Web-Applikation zu entwickeln, bei der zwei Zahlen eingegeben und anschließend addiert oder subtrahiert werden können. Die Umsetzung erfolgte mit **Flask (Backend)**, **Vanilla JS (Frontend-Logik)** sowie **Bootstrap (Styling)**.
+
+Die Benutzeroberfläche (`index.html`) enthält:
+- Zwei Eingabefelder
+- Zwei Buttons für `+` und `−`
+- Eine Ergebnisanzeige im Bootstrap-Style
+
+Die Logik zur Kommunikation mit dem Backend ist in `script.js` implementiert. Sobald ein Button geklickt wird, sendet die `fetch()`-Funktion einen JSON-Request an die `/calculate`-Route im Flask-Backend.
+
+Das Backend (`app.py`) verarbeitet diesen Request:
+- Die Werte `num1`, `num2` und `operation` werden aus dem Request extrahiert
+- Je nach Operation (`add` oder `subtract`) wird das Resultat berechnet
+- Die Antwort erfolgt als JSON-Response zurück ans Frontend
 
 ## Dependency Management
 
