@@ -55,14 +55,28 @@ Ansicht Docker:
 
 | Gewähltes Beispiel | Bitte ausfüllen |
 | -------- | ------- |
-| onnx-sentiment-analysis | Ja/Nein |
-| onnx-image-classification | Ja/Nein |
-| Repo URL Fork | URL |
+| onnx-sentiment-analysis | Nein |
+| onnx-image-classification | Ja |
+| Repo URL Fork | https://github.com/mosazhaw/onnx-image-classification.git |
 | Docker Hub URL | URL |
 
 ### Dokumentation lokales Deployment
 
-* [ ] TODO
+Im zweiten Teil des Lernjournals habe ich das Beispiel onnx-image-classification auf Github geforkt und lokal geklont. Das Projekt enthält bereits ein funktionierendes Dockerfile, welches die benötigten Dateien (ONNX-Modell, labels_map.txt, app.py, Web-UI etc.) sowie die benötigten Python Librarys (requirements.txt) definiert.
+
+Schritte:
+1. Fork auf Github von onnx-image-classfication
+2. Projekt in VS-Code geöffnet und ins Dockerfile gewechselt
+3. Terminal geöffnet und mittels Dockerfile ein Image in mein Docker Hub (hariis) erstellt mittels: `docker build -t hariis/onnx-image-classification:latest .`
+<img src="images/lj2_jusmahar_docker_build.png" alt="Web App" style="max-width: 100%; height: auto;">
+4. Ich konnte das Image nun in meinem Docker Hub ansehen:
+<img src="images/lj2_jusmahar_docker_ansichtdocker2.png" alt="Web App" style="max-width: 100%; height: auto;">
+5. Anschliessend habe ich den Container lokal gestartet. Port 5000 im Container wurde auf Port 9000 von meinem Rechner gemappt:
+<img src="images/lj2_jusmahar_docker_run9000.png" alt="Web App" style="max-width: 100%; height: auto;">
+6. Die Anwendung war im Anschluss direkt über den Browser unter localhost:9000 erreichbar. Die Benutzeroberfläche wurde korrekt geladen und ich konnte mittels einem Bild eines Elefanten auch das Testing der Webapplikation durchführen.
+<img src="images/lj2_jusmahar_docker_webapponnx.png" alt="Web App" style="max-width: 100%; height: auto;">
+7. Nach einem erfolgreichen Testlauf habe ich das lokale Image auf Docker Hub veröffentlicht:
+
 
 ### Dokumentation Deployment Azure Web App
 
