@@ -118,4 +118,19 @@ Besonderheiten:
 
 ### Dokumentation Deployment ACI
 
-* [ ] TODO
+Im dritten und letzten Schritt habe ich die ONNX-Image-Classification-Anwendung in Azure Container Instances (ACI) deployed. Das Ziel war, mein Docker-Image hariis/onnx-image-classification:latest in eine ACI-Umgebung zu deployen und über eine öffentliche URL via HTTP erreichbar zu machen.
+
+Vorgehen:
+1. Container create von ACI (Wichtig: Ich musste auch die CPU & RAM zuweisen, dass es funktioniert)
+<img src="images/lj2_jusmahar_azure_aci_create.png" alt="Web App" style="max-width: 100%; height: auto;">
+2. Der Container wurde nach 1-2 Minuten erstellt und konnte über http://haris-onnx-aci.switzerlandnorth.azurecontainer.io:5000
+<img src="images/lj2_jusmahar_azure_aci_frontend.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Besonderheiten:
+1. Anders als bei Web App oder ACA muss man hier bereits explizit angeben wie viel CPU und RAM zugewiesen werden sollte.
+2. Auch bei ACI muss ein DockerHub-Login erfolgen, selbst wenn das Image Öffentlich zugänglich ist
+3. Man gibt bereits den gewünschten Port an, wo man die Applikation aufrufen möchte
+
+Übersicht Azure Container Instances:
+<img src="images/lj2_jusmahar_azure_aci_frontend.png" alt="Web App" style="max-width: 100%; height: auto;">
+
