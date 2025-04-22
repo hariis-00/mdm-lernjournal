@@ -99,7 +99,22 @@ Besonderheiten:
 
 ### Dokumentation Deployment ACA
 
-* [ ] TODO
+In einem zweiten Schritt habe ich das Deployment via Azure Container Apps (ACA) durchgeführt. Ziel war es, mein Docker-Image hariis/onnx-image-classification:latest, welches zuvor auf Docker Hub veröffentlicht wurde, in eine öffentlich erreichbare Containerumgebung zu deployen.
+
+Vorgehen:
+1. Container App Umgebung erstellen
+<img src="images/lj2_jusmahar_azure_aca_create.png" alt="Web App" style="max-width: 100%; height: auto;">
+2. Container App mit Docker-Image deployen (Ich habe hier einen Access Token generieren lassen für Docker, ohne das funktioniert es nicht)
+<img src="images/lj2_jusmahar_azure_aca_deployment.png" alt="Web App" style="max-width: 100%; height: auto;">
+3. Die Anwendung konnte nach ein paar Sekunden via https://haris-onnx-aca.delightfulwave-fba05301.switzerlandnorth.azurecontainerapps.io geöffnet werden. Ich habe zur Sicherheit nochmals getestet, ob es eine Bilderkennung funktioniert:
+<img src="images/lj2_jusmahar_azure_aca_frontend.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Besonderheiten:
+1. Anscheinend muss man die Lizenz via `az provider register -n Microsoft.OperationalInsights --wait` noch wie "aktiviert" werden, da ansonsten die Erstellung der Container App Umgebung nicht funktioniert.
+
+Übersicht Azure Container Apps:
+<img src="images/lj2_jusmahar_azure_aca_ansichtazure.png" alt="Web App" style="max-width: 100%; height: auto;">
+
 
 ### Dokumentation Deployment ACI
 
