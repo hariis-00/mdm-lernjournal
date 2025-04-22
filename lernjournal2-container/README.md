@@ -132,5 +132,5 @@ Besonderheiten:
 3. Man gibt bereits den gewünschten Port an, wo man die Applikation aufrufen möchte
 
 Übersicht Azure Container Instances:
-<img src="images/lj2_jusmahar_azure_aci_frontend.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/lj2_jusmahar_azure_aci_ansichtazure.png" alt="Web App" style="max-width: 100%; height: auto;">
 
