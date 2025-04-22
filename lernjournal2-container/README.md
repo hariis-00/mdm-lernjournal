@@ -90,8 +90,8 @@ Vorgehen:
 <img src="images/lj2_jusmahar_azure_createappservice2.png" alt="Web App" style="max-width: 100%; height: auto;">
 3. Web App mit Docker Image deployen
 <img src="images/lj2_jusmahar_azure_createwebapp2.png" alt="Web App" style="max-width: 100%; height: auto;">
-4. Das Deployment wurde erfolgreich durchgeführt und ist theoretisch via https://haris-onnx-imageapp.azurewebsites.net abrufbar. Dadurch, dass das Kontigent des F1-Plans bereits aufgebraucht war (Projekt 1 inkl. Lernjournal 1) ist das Abbild des Frontends nicht möglich
-<img src="images/lj2_jusmahar_azure_kontingent.png" alt="Web App" style="max-width: 100%; height: auto;">
+4. Das Deployment wurde erfolgreich durchgeführt und ist via https://haris-onnx-imageapp.azurewebsites.net abrufbar. 
+<img src="images/lj2_jusmahar_azure_ansichtazure.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 Besonderheiten:
 1. Da ich mein Image auf einem ARM-basierten Mac (M4) gebaut hatte, musste ich es mit dem Zusatz `--platform linux/amd64` via `docker buildx` neu erstellen, da Azure Web Apps nur amd64 unterstützt.
