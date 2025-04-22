@@ -10,7 +10,7 @@
 | Image 1 | https://hub.docker.com/r/metabase/metabase |
 | Image 2 | PostgreSQL |
 | Image 2 | (https://hub.docker.com/_/postgres) |
-| Docker Compose | [URL Github Repo](https://github.com/hariis-00/jusmahar_dockercompose/tree/main) |
+| Docker Compose | https://hub.docker.com/r/hariis/onnx-image-classification |
 
 ### Dokumentation manuelles Deployment
 
