@@ -95,7 +95,7 @@ Vorgehen:
 
 Besonderheiten:
 1. Da ich mein Image auf einem ARM-basierten Mac (M4) gebaut hatte, musste ich es mit dem Zusatz `--platform linux/amd64` via `docker buildx` neu erstellen, da Azure Web Apps nur amd64 unterstützt.
-2. Im Azure-Portal wurde beim Status "Kontingent überschritten" angezeigt. Das liegt daran, dass der F1-Plan nur 1 GB & 1 Web App gleichzeitig erlaubt. Auch nachdem ich die anderen WebApps beendet habe und erneutem Deployment veränderte sich der Status nicht. Gem. Logs ist jedoch das Deployment korrekt verlaufen.
+2. Im Azure-Portal wurde zu Beginn beim Status "Kontingent überschritten" angezeigt. Das liegt daran, dass der F1-Plan nur 1 GB & 1 Web App gleichzeitig erlaubt. Gem. Logs ist jedoch das Deployment korrekt verlaufen. Schlussendlich musste man ein paar Stunden abwarten, bis wieder der Speicher frei war.
 
 ### Dokumentation Deployment ACA
 
