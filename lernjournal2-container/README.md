@@ -87,7 +87,7 @@ Vorgehen:
 1. Ressourcengruppe erstellt via `az group create --name mdm-lj2-rg --location switzerlandnorth`
 <img src="images/lj2_jusmahar_azure_createrg2.png" alt="Web App" style="max-width: 100%; height: auto;">
 2. Erstellung des App Service Plan (F1):
-<img src="images/lj2_jusmahar_azure_appservice2.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/lj2_jusmahar_azure_createappservice2.png" alt="Web App" style="max-width: 100%; height: auto;">
 3. Web App mit Docker Image deployen
 <img src="images/lj2_jusmahar_azure_createwebapp2.png" alt="Web App" style="max-width: 100%; height: auto;">
 4. Das Deployment wurde erfolgreich durchgeführt und ist theoretisch via https://haris-onnx-imageapp.azurewebsites.net abrufbar. Dadurch, dass das Kontigent des F1-Plans bereits aufgebraucht war (Projekt 1 inkl. Lernjournal 1) ist das Abbild des Frontends nicht möglich
