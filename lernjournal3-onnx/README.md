@@ -55,5 +55,5 @@ Danach habe ich das Modell ausgewechselt und das neue Modell "efficientnet-lite4
 
 Sobald ich das Modell ausgetauscht habe, konnte ich wieder die Flask-Anwendung starten und habe die Resultate nochmals ausgewertet:
 <img src="images/lj3_jusmahar_onnx_lite4-lit8_car.png" alt="Web App" style="max-width: 100%; height: auto;">
-<img src="images/lj3_jusmahar_onnx_lite4_lit8_matterhorn.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/lj3_jusmahar_onnx_lite4-lit8_matterhorn.png" alt="Web App" style="max-width: 100%; height: auto;">
 <img src="images/lj3_jusmahar_onnx_lite4-lit8_train.png" alt="Web App" style="max-width: 100%; height: auto;">
