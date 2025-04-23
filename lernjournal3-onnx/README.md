@@ -57,3 +57,20 @@ Sobald ich das Modell ausgetauscht habe, konnte ich wieder die Flask-Anwendung s
 <img src="images/lj3_jusmahar_onnx_lite4-lit8_car.png" alt="Web App" style="max-width: 100%; height: auto;">
 <img src="images/lj3_jusmahar_onnx_lite4-lit8_matterhorn.png" alt="Web App" style="max-width: 100%; height: auto;">
 <img src="images/lj3_jusmahar_onnx_lite4-lit8_train.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Vergleich Modelversionen
+Ich habe die gleiche Bildklassifikation mit beiden Modellversionen durchgeführt und Unterschiede in den Prediction-Werten beobachtet:
+
+- **Beispiel `train.jpg`:**
+  - **Alt:** Höchster Score 0.3470 (`streetcar, tram, …`)
+  - **Neu:** Score bei 0.2526 – ebenfalls gleiche Klasse, aber etwas konservativer
+
+- **Beispiel `car.jpg`:**
+  - **Alt:** Höchster Score 0.2627 (`beach wagon`)
+  - **Neu:** Deutlich höherer Score von 0.3709 für dieselbe Klasse → Modell wirkt sicherer
+
+- **Beispiel `matterhorn.jpg`:**
+  - **Alt:** Score für `lakeside` am höchsten mit 0.0131
+  - **Neu:** Neue höchste Klasse ist `valley` mit 0.0113 – leicht andere Priorisierung
+
+Insgesamt zeigen sich nur kleinere Unterschiede, was darauf hindeutet, dass die Modellstruktur und -gewichte im Wesentlichen gleich geblieben sind. Trotzdem war der das Testing sinnvoll, um sicherzugehen, dass das neue Modell wirklich geladen und verwendet wird.
