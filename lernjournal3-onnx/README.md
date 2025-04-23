@@ -44,4 +44,16 @@ EfficientNet-Lite4 ist auf Effizienz optimiertes Convolutional Neural Network (C
 
 ## Dokumentation onnx-image-classification
 
-* [ ] TODO
+Als erstes habe ich das Repositoriy onnx-image-classification geforked und lokal zum laufen gebracht. Dies konnte ich via flask starten und konnte die ersten 3 Bilder, die im Repo hinterlegt waren mal austesten. Folgende Resultate habe ich erhalten:
+
+<img src="images/lj3_jusmahar_onnx_lite4_car.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/lj3_jusmahar_onnx_lite4_matterhorn.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/lj3_jusmahar_onnx_lite4_train.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Danach habe ich das Modell ausgewechselt und das neue Modell "efficientnet-lite4-int8" ins Repository hinzugefügt. Des Weiteren musste ich die App.py anpassen, sodass auf das neue Modell zugegriffen wird:
+<img src="images/lj3_jusmahar_onnx_apppy.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Sobald ich das Modell ausgetauscht habe, konnte ich wieder die Flask-Anwendung starten und habe die Resultate nochmals ausgewertet:
+<img src="images/lj3_jusmahar_onnx_lite4-lit8_car.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/lj3_jusmahar_onnx_lite4_lit8_matterhorn.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/lj3_jusmahar_onnx_lite4-lit8_train.png" alt="Web App" style="max-width: 100%; height: auto;">
