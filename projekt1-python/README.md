@@ -50,27 +50,42 @@ Nach wenigen Sekunden waren die Daten in der MongoDB abgelegt:
 
 ### Training
 
-Das Machine Learning Modell wird im Script `machinelearningmodel.py` trainiert. Es basiert auf den aus MongoDB geladenen Daten. Die wesentlichen Schritte:
+Das Machine Learning Modell wird im Script `machinelearningmodel.py` trainiert. Es basiert auf den aus MongoDB geladenen Daten. 
+
+<img src="images/mongodbdaten.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+
+Die wesentlichen Schritte:
 
 1. **Datenbereinigung**:
    - Preise wurden von „CHF“-Symbolen befreit
    - Reviews als Integer gespeichert
    - Score als Float interpretiert
 
+<img src="images/datenbereinigung.png" alt="Web App" style="max-width: 100%; height: auto;">
+
 2. **Feature Engineering**:
    - Eingesetzte Features: `score` & `reviews count`
    - Zielwert: `price`
 
+<img src="images/featureengineering.png" alt="Web App" style="max-width: 100%; height: auto;">
+
 3. **Modellwahl**:
    - Ein **Polynomial Regressionsmodell (Grad 2)** wurde über `sklearn.pipeline` implementiert.
    - Die Wahl fiel darauf, da lineare Zusammenhänge nicht ausreichten, um nicht-lineare Muster (z. B. starke Preise bei hohen Scores) zu erfassen.
+  
+<img src="images/regression.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 4. **Evaluierung**:
    - Verwendete Metriken: R²-Score, MSE, MSLE, Median Absolute Error
    - Die Metriken wurden ausgegeben und dienten zur Beurteilung der Modellgüte.
+  
+<img src="images/metriken.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 5. **Speicherung**:
    - Das Modell wurde mit `joblib` als `.pkl` gespeichert und optional im Azure Blob Storage versioniert hochgeladen.
+  
+<img src="images/blob.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 ### ModelOps Automation
 
