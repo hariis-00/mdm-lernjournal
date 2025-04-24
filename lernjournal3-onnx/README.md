@@ -72,3 +72,6 @@ Ich habe die gleiche Bildklassifikation mit beiden Modellversionen durchgeführt
   - **Neu:** Neue höchste Klasse ist `valley` mit 0.0113 – leicht andere Priorisierung
 
 Insgesamt zeigen sich nur kleinere Unterschiede, was darauf hindeutet, dass die Modellstruktur und -gewichte im Wesentlichen gleich geblieben sind. Trotzdem war der das Testing sinnvoll, um sicherzugehen, dass das neue Modell wirklich geladen und verwendet wird.
+
+**Push Github**
+Zu guter Letzt habe ich die Veränderungen mit dem neuen Modell ins Github-Repo gepusht --> (https://github.com/hariis-00/onnx-image-classification)
