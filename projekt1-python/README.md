@@ -64,11 +64,15 @@ Die wesentlichen Schritte:
 
 <img src="images/datenbereinigung.png" alt="Web App" style="max-width: 100%; height: auto;">
 
+Die Daten wurden aus der Datenbank extrahiert un in ein Pandas-Dataframe eingefügt. Die Spalten `price` und `reviews count` wurden mittels Regex bereinigt, sodass ich nur numerische Werte habe. Der Wert `score` wurde ebenfalls konvertiert, sodass es ein Float-Wert gibt. 
+
 2. **Feature Engineering**:
    - Eingesetzte Features: `score` & `reviews count`
    - Zielwert: `price`
 
 <img src="images/featureengineering.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Die Features `score` und `reviews count` und der Target `price` wurden für die Anwendung von Machine Learning festgelegt. Des Weiteren wurden die Daten in Trainings- und Testdaten aufgeteilt, um das Modell zu trainieren und die Leistung messen zu können.
 
 3. **Modellwahl**:
    - Ein **Polynomial Regressionsmodell (Grad 2)** wurde über `sklearn.pipeline` implementiert.
@@ -76,16 +80,31 @@ Die wesentlichen Schritte:
   
 <img src="images/regression.png" alt="Web App" style="max-width: 100%; height: auto;">
 
+Die Pipeline `PolynomialFeatures` und `LinearRegression` wurde erstellt, um die nichtlinearen Beziehungen zwischen den Features und dem Target zu berücksichtigen. Als Polynomialgrad wurde Grad 2 genommen, damit wir die Werte quadrieren.
+
 4. **Evaluierung**:
    - Verwendete Metriken: R²-Score, MSE, MSLE, Median Absolute Error
    - Die Metriken wurden ausgegeben und dienten zur Beurteilung der Modellgüte.
   
 <img src="images/metriken.png" alt="Web App" style="max-width: 100%; height: auto;">
 
+Das Modell wurde mit den Trainingsdaten trainiert und mit den Testdaten evaluiert, um die verschiedenen Metriken wie MSE, R²-Score, MSLE und den median_ae zu berechnen. 
+
+<img src="images/werte.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Somit konnte eine Korrelationsmatrix erstellt werden, welche die Beziehungen zwischen den numerischen Variablen visualisiert. Sämtliche nicht numerischen Variablen werden dabei extrahiert und entfernt. 
+
+<img src="images/heatmap.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+
 5. **Speicherung**:
    - Das Modell wurde mit `joblib` als `.pkl` gespeichert und optional im Azure Blob Storage versioniert hochgeladen.
   
 <img src="images/blob.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Damit wir eine korrekte Versionierung des Modells haben, wurden die jeweils erstellten Modelle in den Azure Blob Storage abgespeichert. Somit kann sichergestellt werden, dass wir zu jedem Zeitpunkt wissen, welches Modell für die Bearbeitung der Daten verwendet wurde.
+
+<img src="images/azureblob.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 ### ModelOps Automation
 
