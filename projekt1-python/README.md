@@ -152,7 +152,19 @@ Somit konnte das Docker-Image via `docker build -t hariis/hotel-app` erstellen:
 
 <img src="images/dockerimage.png" alt="Web App" style="max-width: 100%; height: auto;">
 
-und via `docker run -p 5000:5000 hotel-app` auch ebenfalls ausführen:
+und via `docker run -p 5000:5000 hotel-app` auch ebenfalls ausführen.
 
-<img src="images/dockerrun.png" alt="Web App" style="max-width: 100%; height: auto;">
+3. Nach dem ich das Image erstellt habe, musste ich das Image noch auf DockerHub pushen, sodass es öffentlich zugänglich ist. Dies habe ich via:
+`docker tag hotel-app hariis/hotel-app:latest`
+`docker pusht hariis/hotel-app:latest`
+machen können.
+Damit das ganze auch funktioniert, musste ich vorgängig die Zugangsdaten von DockerHub in den Secrets hinterlegen, sodass dies überprüft werden kann.
+
+4. Im Anschluss habe ich dann diverse Ressourcen via Azure CLI eröffnet, nämlich:
+- Ressourcengruppe: project1
+- App Service Plan
+- Web App: hotel-preis-app-jusmani
+
+Die 
+
 
