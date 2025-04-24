@@ -137,4 +137,22 @@ Bei jeder Ausführung ist entsprechend in GitHub Actions der Workflow zu sehen o
 
 ### Deployment
 
-* [ ] TODO
+Da Ziel des Deployments war, die gesamte Machine Learning Anwendung, inklusive Web-App, UI und ML-Modell in einem Docker-Container bereitzustellen und auf Azure App Service zu deployen.
+
+Damit das Deployment erfolgreich funktioniert, habe ich folgende Schritte unternommen:
+1. Zuerst habe ich überprüft, ob sämtliche Komponenten (Backend, Frontend, Scraping etc.) lokal funktionieren und habe es via `flask run` zum laufen gebracht.
+
+<img src="images/flaskrun.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+2. Sobald alles funktioniert hat, habe ich dann ein Docker-Image mit dockerfile erstellt, welches das Image kreieren sollte:
+
+<img src="images/dockerfile.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Somit konnte das Docker-Image via `docker build -t hariis/hotel-app` erstellen:
+
+<img src="images/dockerimage.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+und via `docker run -p 5000:5000 hotel-app` auch ebenfalls ausführen:
+
+<img src="images/dockerrun.png" alt="Web App" style="max-width: 100%; height: auto;">
+
