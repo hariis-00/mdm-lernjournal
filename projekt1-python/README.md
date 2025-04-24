@@ -29,7 +29,7 @@ Im Script **bookingscraper.py** wurde eine For-Schleife über 10 Ergebnisseiten 
 - Anzahl Reviews
 - Ort/Adresse
 
-<img src="images/scraper1.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/scraper_1.png" alt="Web App" style="max-width: 100%; height: auto;">
 <img src="images/forschleife.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 Das Scraping dauerte einige wenige Minuten, sodass ich mich für eine eher kleinere Anzahl entschieden habe, sodass wir noch genug Daten für eine ML-Anwendung haben.
