@@ -108,7 +108,32 @@ Damit wir eine korrekte Versionierung des Modells haben, wurden die jeweils erst
 
 ### ModelOps Automation
 
-* [ ] TODO
+Für das ModelOps-Setup wurden mehrere GitHub Actions Workflows eingerichtet:
+
+1. **Scraping Workflow - scrape.yml**:
+Scrape.yml führt täglich um 05:00 Uhr (03:00 UTC) das Webscraping auf Booking.com durch und speichert diese, wie bis anhin, einmal als .csv und einmal als .xlsx. Diese Daten werden dann ebenfalls an die MongoDB weitergeleitet zur Speicherung.
+
+<img src="images/scrapeyml.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Bei jeder Ausführung ist entsprechend in GitHub Actions der Workflow zu sehen ob dieser erfolgreich gestartet wurde:
+
+<img src="images/workflowscrape.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+2. **Training Workflow - train.yml**:
+Train.yml führt täglich um 05:30 Uhr (03:00 UTC, Zeitversetzt zum Scraping Workflow) das Modelltraining auf Basis der neu gescrapten Daten durch und speichert das .pkl-File auch automatisch in den Azure Blob Storage. Dabei kann der Workflow via SAS_URL zugreifen, die ich in den Secrets des Repo's hinterlegt habe:
+
+<img src="images/trainyml.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Bei jeder Ausführung ist entsprechend in GitHub Actions der Workflow zu sehen ob dieser erfolgreich gestartet wurde:
+<img src="images/workflowtrain.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+3. **Deployment Workflow - deploy.yml**:
+Deployment.yml baut automatisch das Docker-Image und deployed es auf den Azure Web App Service. Damit dies überhaupt geschehen kann, muss ein .pkl-File vorhanden sein. Das Frontend und die Flask-App werden in einem Container bereitgestellt. Der Workflow wird beim Push auf main automatisch ausgelöst.
+
+<img src="images/trainyml.png" alt="Web App" style="max-width: 100%; height: auto;">
+
+Bei jeder Ausführung ist entsprechend in GitHub Actions der Workflow zu sehen ob dieser erfolgreich gestartet wurde:
+<img src="images/workflowdeploy.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 ### Deployment
 
