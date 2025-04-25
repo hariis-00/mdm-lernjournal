@@ -36,7 +36,10 @@ Die gesamte Konfiguration erfolgte über eine docker-compose.yml Datei, die beid
 
 Schritte:
 1. Ich habe folglich ein Ordner im Visual Studio Code eröffnet, in dem ich meine docker-compose.yml angesetzt habe. Ich habe dort festgelegt, wie die beiden Images ausgeführt werden sollten, wenn ich Compose Up ausführe.
-2. Das System habe ich anschliessend mit dem Befehl `docker-compose up -d` gestartet. Alternativ kann das System via Rechtsklick auf dem Docker-compose File gestartet werden.
+2. Das System habe ich anschliessend mit dem Befehl:
+```bash
+docker-compose up -d` gestartet. Alternativ kann das System via Rechtsklick auf dem Docker-compose File gestartet werden.
+```
 <img src="images/lj2_jusmahar_docker_composeup.png" alt="Web App" style="max-width: 100%; height: auto;">
 3. Nach wenigen Sekunden war die Metabase-Obefläche unter `localhost:3000` erreichbar. Beim ersten Start durchlief ich den Initialisierungsprozess im Browser (Benutzername, Passwort, Verbindung zur DB). Anschliessend war die Anwendung einsatzbereit.
 <img src="images/lj2_jusmahar_docker_metabase.png" alt="Web App" style="max-width: 100%; height: auto;">
@@ -84,13 +87,16 @@ Schritte:
 Im Anschluss an den lokalen Build und Push meines ONNX Image Classfication Containeres auf Docker Hub habe ich das Image in einer Azure Web App deployed.
 
 Vorgehen:
-1. Ressourcengruppe erstellt via `az group create --name mdm-lj2-rg --location switzerlandnorth`
+1. Ressourcengruppe erstellt via:
+```bash
+az group create --name mdm-lj2-rg --location switzerlandnorth
+```
 <img src="images/lj2_jusmahar_azure_createrg2.png" alt="Web App" style="max-width: 100%; height: auto;">
-2. Erstellung des App Service Plan (F1):
+3. Erstellung des App Service Plan (F1):
 <img src="images/lj2_jusmahar_azure_createappservice2.png" alt="Web App" style="max-width: 100%; height: auto;">
-3. Web App mit Docker Image deployen
+4. Web App mit Docker Image deployen
 <img src="images/lj2_jusmahar_azure_createwebapp2.png" alt="Web App" style="max-width: 100%; height: auto;">
-4. Das Deployment wurde erfolgreich durchgeführt und ist via https://haris-onnx-imageapp.azurewebsites.net abrufbar. 
+5. Das Deployment wurde erfolgreich durchgeführt und ist via (https://haris-onnx-imageapp.azurewebsites.net) abrufbar. 
 <img src="images/lj2_jusmahar_azure_ansichtazure.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 Besonderheiten:
@@ -110,7 +116,11 @@ Vorgehen:
 <img src="images/lj2_jusmahar_azure_aca_frontend.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 Besonderheiten:
-1. Anscheinend muss man die Lizenz via `az provider register -n Microsoft.OperationalInsights --wait` noch wie "aktiviert" werden, da ansonsten die Erstellung der Container App Umgebung nicht funktioniert.
+1. Anscheinend muss man die Lizenz via:
+```bash
+az provider register -n Microsoft.OperationalInsights --wait
+```
+noch wie "aktiviert" werden, da ansonsten die Erstellung der Container App Umgebung nicht funktioniert.
 
 Übersicht Azure Container Apps:
 <img src="images/lj2_jusmahar_azure_aca_ansichtazure.png" alt="Web App" style="max-width: 100%; height: auto;">
