@@ -165,6 +165,33 @@ Damit das ganze auch funktioniert, musste ich vorgängig die Zugangsdaten von Do
 - App Service Plan
 - Web App: hotel-preis-app-jusmani
 
-Die 
+Folgendermassen habe ich die Ressourcengruppe angelegt:
+```bash
+az group create \
+--name project1 \
+--location switzerlandnorth\
+```
+
+Folgendermassen habe ich den App Service Plan eröffnet:
+```bash
+az appservice plan create \
+  --name hotel-plan \
+  --resource-group project1 \
+  --is-linux \
+  --sku B1
+```
+
+Folgendermassen habe ich die Web App auf Basis des Containers eröffnet:
+```bash
+az webapp create \
+  --resource-group project1 \
+  --plan hotel-plan \
+  --name hotel-preis-app-jusmani \
+  --deployment-container-image-name hariis/hotel-app:latest
+```
+
+
+
+
 
 
