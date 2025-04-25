@@ -5,10 +5,10 @@
 | | Bitte ausfüllen |
 | -------- | ------- |
 | Variante | Eigenes Projekt (Booking.com) |
-| Datenherkunft | Format (HTML, XML, JSON, ...), Beschreibung |
+| Datenherkunft | Scraping von unstrukturierten HTML-Daten |
 | Datenherkunft | Booking.com |
 | ML-Algorithmus | Polynominale Regression |
-| Repo URL | URL |
+| Repo URL | https://github.com/hariis-00/Project1_MDM_JUSMAHAR |
 
 ## Dokumentation
 
@@ -165,14 +165,15 @@ Damit das ganze auch funktioniert, musste ich vorgängig die Zugangsdaten von Do
 - App Service Plan
 - Web App: hotel-preis-app-jusmani
 
-Folgendermassen habe ich die Ressourcengruppe angelegt:
+Folgendermassen habe ich die Ressourcengruppe angelegt im Azure CLI:
 ```bash
 az group create \
 --name project1 \
 --location switzerlandnorth\
 ```
+<img src="images/ressourcenplan.png" alt="Web App" style="max-width: 100%; height: auto;">
 
-Folgendermassen habe ich den App Service Plan eröffnet:
+Folgendermassen habe ich den App Service Plan eröffnet im Azure CLI:
 ```bash
 az appservice plan create \
   --name hotel-plan \
@@ -180,8 +181,9 @@ az appservice plan create \
   --is-linux \
   --sku B1
 ```
+<img src="images/appservice.png" alt="Web App" style="max-width: 100%; height: auto;">
 
-Folgendermassen habe ich die Web App auf Basis des Containers eröffnet:
+Folgendermassen habe ich die Web App auf Basis des Containers eröffnet im Azure CLI:
 ```bash
 az webapp create \
   --resource-group project1 \
@@ -189,9 +191,10 @@ az webapp create \
   --name hotel-preis-app-jusmani \
   --deployment-container-image-name hariis/hotel-app:latest
 ```
+<img src="images/webapp.png" alt="Web App" style="max-width: 100%; height: auto;">
 
+Nach dem ich diese Schritte ausgeführt habe, konnte ich meine Anwendung aufrufen unter der URL:
+(https://hotel-preis-app-jusmani.azurewebsites.net)
 
-
-
-
-
+<img src="images/ansicht1.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/ansichtresultat.png" alt="Web App" style="max-width: 100%; height: auto;">
