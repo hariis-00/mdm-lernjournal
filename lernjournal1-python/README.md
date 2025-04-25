@@ -34,7 +34,9 @@ Vorteile dieses Ansatzes:
 - Transparenz: Welche Librarys von anderen Librarys abhängen, ist durch die .txt-Dateien gut nachvollziehbar
 
 Setup-Befehl:
+```bash
 pip install -r requirements.txt
+```
 
 ## Deployment
 
@@ -44,9 +46,11 @@ Vorgehen Schritt für Schritt:
 
 1. Projekt vorbereiten (ZIP-Archiv erstellen)
 Zuerst wurde das Projekt als ZIP-Datei verpackt, wobei temporäre Dateien (z.B. .venv) ausgeschlossen wurden:
-`zip -r deployment.zip . -x "*.venv*" "*.git*" "__pycache__/*"`
+```bash
+zip -r deployment.zip . -x "*.venv*" "*.git*" "__pycache__/*"
+```
 
-2. Azure Ressource anlegen:
+3. Azure Ressource anlegen:
 Es wurde eine neue Ressourcengruppe, ein App Service Plan und eine Web-App mit Python Runtime erstellt. Dabei wurde die Version Python 3.13 gewählt und ein frei wählbarer App-Name vergeben:
 
 `az group create --name mdm-lj1-rg --location switzerlandnorth`
@@ -60,17 +64,21 @@ Es wurde eine neue Ressourcengruppe, ein App Service Plan und eine Web-App mit P
 
 3. Startkonfiguration für Azure
 Azure erwartet beim Python-Deployment einen sogenannten Entry-Point. Damit gunicorn die Flask-App starten kann, wurde eine startup.txt mit folgendem Inhalt im Projektverzeichnis erstellt:
-`gunicorn --bind=0.0.0.0 --timeout 600 app:app`
+```bash
+gunicorn --bind=0.0.0.0 --timeout 600 app:app
+```
 
-4. Deployment durchführen
+5. Deployment durchführen
 Die ZIP-Datei wurde via Azure CLI hochgeladen:
 
-`az webapp deployment source config-zip --resource-group mdm-lj1-rg --name jusmahartaschenrechner --src deployment.zip`
+```bash
+az webapp deployment source config-zip --resource-group mdm-lj1-rg --name jusmahartaschenrechner --src deployment.zip
+```
 <img src="images/lj1_jusmahar_azure_deployment.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 5. Webapp aufrufen:
 Nach dem erfolgreichen Upload war die Anwendung sofort unter folgender URL ersichtlich:
-https://jusmahartaschenrechner.azurewebsites.net
+(https://jusmahartaschenrechner.azurewebsites.net)
 
 <img src="images/lj1_jusmahar_azure_applikation.png" alt="Web App" style="max-width: 100%; height: auto;">
 
