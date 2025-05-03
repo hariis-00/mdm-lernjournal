@@ -8,7 +8,7 @@
 | Datensatz (wenn selbstgewählt) | JPEG-Bilder von Hunden/Hunderassen |
 | Datensatz (wenn selbstgewählt) | http://vision.stanford.edu/aditya86/ImageNetDogs/ |
 | Modell (wenn selbstgewählt) | https://pytorch.org/vision/main/models/generated/torchvision.models.resnet50.html |
-| ML-Algorithmus | Bezeichnung |
+| ML-Algorithmus | Residual Neural Network |
 | Repo URL | [(https://github.com/hariis-00/Project2_MDM_JUSMAHAR) |
 
 ## Dokumentation
@@ -30,6 +30,7 @@ Ich hatte das Glück, dass ich mir erst vor kurzem einen sehr leistungsstarken L
 Ich habe im File "Training.java" entsprechend definiert wie die Bilder trainiert werden sollten. Zu Beginn habe ich mal definiert wie gross die Batch-Size und die Anzahl Epochen. Batch-Size zeigt, wie viele Bilder gleichzeitig trainiert werden sollten und die Epochen, wie viele Durchgänge gemacht werden sollten. Ich habe mich dort herangetastet und versucht das bestmögliche Resultat zu erhalten. 
 
 Am Schluss habe ich mich entschieden, dass eine Batch-Size von 64 und 15 Epochen ein ideales Training für die Bilderkennung sind. 
+
 <img src="images/batchepochs.png" alt="Web App" style="max-width: 100%; height: auto;">
 
 Das Training wird angestossen mit der Methode "main" die folgenden Ablauf innehat:
