@@ -40,7 +40,7 @@ Das Training wird angestossen mit der Methode "main" die folgenden Ablauf inneha
 2. Es wird ein Konfigurationsobjekt erstellt, das Informationen wie die Genauigkeit (Accuracy), Verlust (Loss) & Listener für das Training beinhaltet.
 <img src="images/loss.png" alt="Web App" style="max-width: 100%; height: auto;">
 3. Modell und Trainer konfigurieren bzw. initialisieren:
-<img src="images/modelinitial.png" alt="Web App" style="max-width: 100%; height: auto;">
+<img src="images/modelinital.png" alt="Web App" style="max-width: 100%; height: auto;">
 4. Eingabeformat der Bilder definieren, sodass in der Netzwerkarchitektur korrekt initialisiert werden:
 <img src="images/inputshape.png" alt="Web App" style="max-width: 100%; height: auto;">
 5. Trainingsergebnisse (Accuracy und Loss) & Modell abspeichern:
