@@ -15,7 +15,7 @@
 | Datenquelle klar definiert (Projekt 2: zusätzlich Abgrenzung zu Projekt 1) | 3  | Komplett anderes Thema   | Keine                       |
 | (Scraping vorhanden)                                                         | 3  | Scrapping wird manuell gemacht  | Keine                       |
 | (Datensatz vorhanden)                                                        | 3  |   | Keine                       |
-| (Datensatz-Grösse ausreichend, Aufteilung Train/Test, Kennzahlen vorhanden)  |    | Total 9 Klassen à 150-200 Bilder   | Keine                       |
+| (Datensatz-Grösse ausreichend, Aufteilung Train/Test, Kennzahlen vorhanden)  |  3  | Total 9 Klassen à 150-200 Bilder   | Keine                       |
 | Modell vorhanden                                                           | 3  | Selbsterstelltes Modell durch maniyman   | Keine                       |
 | App: auf lokalem Rechner gestartet und funktional                          | 3  |    | Keine                       |
 | App: mehrere unterschiedliche Testcases durch Reviewer ausführbar          | 3  |    | Keine                       |
