@@ -4,7 +4,7 @@
 
 |       | Bitte ausfüllen |
 |-------|-----------------|
-| Review von (ZHAW-Kürzel) |     akguelar       |
+| Review von (ZHAW-Kürzel) |     maniyman       |
 | Review durch (ZHAW-Kürzel) |     jusmahar       |
 | Datum Review, von/bis |   06.05.2025   |
 
@@ -12,16 +12,16 @@
 
 | Thema                                                                      | Skala | Mängel* | Verbesserungsmöglichkeiten* |
 |----------------------------------------------------------------------------|-------|--------|----------------------------|
-| Datenquelle klar definiert (Projekt 2: zusätzlich Abgrenzung zu Projekt 1) | TODO  | TODO   | TODO                       |
-| (Scraping vorhanden)                                                         | TODO  | TODO   | TODO                       |
-| (Datensatz vorhanden)                                                        | TODO  | TODO   | TODO                       |
-| (Datensatz-Grösse ausreichend, Aufteilung Train/Test, Kennzahlen vorhanden)  | TODO  | TODO   | TODO                       |
-| Modell vorhanden                                                           | TODO  | TODO   | TODO                       |
-| App: auf lokalem Rechner gestartet und funktional                          | TODO  | TODO   | TODO                       |
-| App: mehrere unterschiedliche Testcases durch Reviewer ausführbar          | TODO  | TODO   | TODO                       |
-| Deployment: Falls bereits vorhanden, funktional und automatisiert          | TODO  | TODO   | TODO                       |
-| Code: Git-Repository vorhanden, Arbeiten mit Branches / Commits            | TODO  | TODO   | TODO                       |
-| Code: Dependency Management, Dockerfile, Build funktional                  | TODO  | TODO   | TODO                       |
+| Datenquelle klar definiert (Projekt 2: zusätzlich Abgrenzung zu Projekt 1) | 3  | Komplett anderes Thema   | Keine                       |
+| (Scraping vorhanden)                                                         | 3  | Scrapping wird manuell gemacht  | Keine                       |
+| (Datensatz vorhanden)                                                        | 3  |   | Keine                       |
+| (Datensatz-Grösse ausreichend, Aufteilung Train/Test, Kennzahlen vorhanden)  |    | Total 9 Klassen à 150-200 Bilder   | Keine                       |
+| Modell vorhanden                                                           | 3  | Selbsterstelltes Modell durch maniyman   | Keine                       |
+| App: auf lokalem Rechner gestartet und funktional                          | 3  |    | Keine                       |
+| App: mehrere unterschiedliche Testcases durch Reviewer ausführbar          | 3  |    | Keine                       |
+| Deployment: Falls bereits vorhanden, funktional und automatisiert          | 3  |    | Keine                       |
+| Code: Git-Repository vorhanden, Arbeiten mit Branches / Commits            | 3  |    | Keine                       |
+| Code: Dependency Management, Dockerfile, Build funktional                  | 3  |    | Keine                       |
 
 \* wenn fehlend: mögliche Schwierigkeiten und Lösungen besprechen
 
