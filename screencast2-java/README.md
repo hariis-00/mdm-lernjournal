@@ -23,30 +23,3 @@ Bitte Anzahl Unterkapitel entsprechend der Gruppengrösse anpassen. Der eigene S
 Die Applikation schafft es in nahezu allen Fällen die Happiness von Emojis festzustellen auch wenn diese nicht im Trainingsdatenset vorkamen.
  
 Leider kein JDL möglich in der abgegebenen Version, da dies kurz vor der Abgabe noch durch Änderungen kaputtgemacht wurde. |
-
-## Screencast 3
-
-|       | Bitte ausfüllen |
-|-------|-----------------|
-| Review durch (ZHAW-Kürzel) |            |
-| Review von (ZHAW-Kürzel) |            |
-| Sprache, Kommunikation, roter Faden | TODO |
-| Nachvollziehbarkeit Inhalt, Demonstration | TODO |
-
-## Screencast 4
-
-|       | Bitte ausfüllen |
-|-------|-----------------|
-| Review durch (ZHAW-Kürzel) |            |
-| Review von (ZHAW-Kürzel) |            |
-| Sprache, Kommunikation, roter Faden | TODO |
-| Nachvollziehbarkeit Inhalt, Demonstration | TODO |
-
-## Screencast 5
-
-|       | Bitte ausfüllen |
-|-------|-----------------|
-| Review durch (ZHAW-Kürzel) |            |
-| Review von (ZHAW-Kürzel) |            |
-| Sprache, Kommunikation, roter Faden | TODO |
-| Nachvollziehbarkeit Inhalt, Demonstration | TODO |
