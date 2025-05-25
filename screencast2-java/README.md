@@ -18,8 +18,4 @@ Bitte Anzahl Unterkapitel entsprechend der Gruppengrösse anpassen. Der eigene S
 | Review durch (ZHAW-Kürzel) |    jusmahar        |
 | Review von (ZHAW-Kürzel) |     totholi       |
 | Sprache, Kommunikation, roter Faden | Gutes Tempo und Verständlichkeit des Videos, roter Faden wird mehrheitlich beibehalten und bringt das Projekt auch verständlich rüber. Empfehlung: Nicht zu tief in die Materie eintiefen, um das gezeigt Projekt auch für Anfänger verständlich zu gestalten. |
-| Nachvollziehbarkeit Inhalt, Demonstration | Applikation ist auf Azure deployed (leider hat es während dem Screencast nicht funktioniert).
- 
-Die Applikation schafft es in nahezu allen Fällen die Happiness von Emojis festzustellen auch wenn diese nicht im Trainingsdatenset vorkamen.
- 
-Leider kein JDL möglich in der abgegebenen Version, da dies kurz vor der Abgabe noch durch Änderungen kaputtgemacht wurde. |
+| Nachvollziehbarkeit Inhalt, Demonstration | Applikation ist auf Azure deployed (leider hat es während dem Screencast nicht funktioniert). Die Applikation schafft es in nahezu allen Fällen die Happiness von Emojis festzustellen auch wenn diese nicht im Trainingsdatenset vorkamen. Leider kein JDL möglich in der abgegebenen Version, da dies kurz vor der Abgabe noch durch Änderungen kaputtgemacht wurde. |
