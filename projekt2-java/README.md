@@ -9,7 +9,7 @@
 | Datensatz (wenn selbstgewählt) | http://vision.stanford.edu/aditya86/ImageNetDogs/ |
 | Modell (wenn selbstgewählt) | https://pytorch.org/vision/main/models/generated/torchvision.models.resnet50.html |
 | ML-Algorithmus | Residual Neural Network |
-| Repo URL | [(https://github.com/hariis-00/Project2_MDM_JUSMAHAR) |
+| Repo URL | (https://github.com/hariis-00/Project2_MDM_JUSMAHAR) |
 
 ## Dokumentation
 
